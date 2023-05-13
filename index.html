@@ -7,34 +7,112 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
             background: #f0f0f0;
         }
         #game {
             text-align: center;
-            max-width: 600px;
+            padding-top: 50vh; /* This will push the game interface down. Adjust the value as per your preference. */
         }
-        #choices {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2em;
+        #prompt-table {
+            margin-top: 50px;
+            border-collapse: collapse;
+            width: 70%;
         }
-        .choice {
-            padding: 1em;
-            border: 1px solid #000;
-            cursor: pointer;
+        #prompt-table th, #prompt-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #prompt-table tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <div id="game">
-        <h1>20 Minute AI-Generated Choose Your Own Adventure</h1>
-        <h2 id="question"></h2>
-        <div id="choices"></div>
-        <a href="about.html">About</a>
+        <h1>ChatGPT Generated Academic Choose Your Own Adventure v.2</h1>
+        <p id="question"></p>
+        <div id="choice-container"></div>
     </div>
     <script src="game.js"></script>
+    <table id="prompt-table">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Prompt</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>I want you to write me a web game using html, css, and javascript. The game is a choose your own adventure set in academia. Its tone should be ironic.</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>The starting options should be "Undergrad," "Graduate Student," "Tenure Track Faculty." At some point the player must be asked to choose an academic discipline from the list "Physics," "Biology," "Computer Science," "Fine Arts".</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The possible endings are "Appointed Provost," "Died of Dysentery," "Work for a startup," and "Get another PhD?". You will generate the other choice points in the game based on funny, ironic, slightly mean stereotypes of those degrees. There should be at least 3 choice points and no more than 5 before the ending.</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Keep going from where you left off.</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>How do I run this in my browser?</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Give me just the game.js code again.</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Give it the title "ChatGPT Generated Academic Choose Your Own Adventure" and create an About page linked from the main page that includes all the prompts used to this point. Do not include the code generated.</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Keep going.</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Include the full prompts in the About page. Do not truncate.</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                <td>Instead of a game, take the original rules and write it as a traditional choose your own adventure.</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Keep going from where you left off.</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Rewrite the original code but with a minimum of 5 choice points per storyline.</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Keep going from where you left off.</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>How do I update the game with these changes?</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Regenerate the index.html file.</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Keep going.</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
