@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        #game {
+            text-align: center;
+            max-width: 600px;
+        }
+        #choices {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2em;
+        }
+        .choice {
+            padding: 1em;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>ChatGPT Generated Academic Choose Your Own Adventure</h1>
+        <h2 id="question"></h2>
+        <div id="choices"></div>
+        <a href="about.html">About</a>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
